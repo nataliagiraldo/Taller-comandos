@@ -10,7 +10,7 @@ Este alias está configurado para proporcionar una salida de registro concisa e 
 
 Ejemplo de uso:
 ```bash
-git ea
+git config --global alias.ea "log --pretty=format:'%h %s | %d [%an]' --graph -n 5"
 ```
 
 ### Alias: `eb`
@@ -25,7 +25,7 @@ Este alias está diseñado para crear una salida de registro detallada y colorid
 
 Ejemplo de uso:
 ```bash
-git eb
+git config --global alias.eb "log --graph --abbrev-commit --decorate --format=format:'%Cred%h%C(reset) %C(yellow)%d%C(reset) %s %Cgreen(%ar)%C(reset)' --all"
 ```
 
 ### Alias: `last`
@@ -35,7 +35,8 @@ Este alias simplifica el comando para mostrar el último commit en la rama actua
 
 Ejemplo de uso:
 ```bash
-git last
+git config --global alias.last "log -1 HEAD"
+
 ```
 
 ### Alias: `ec`
@@ -45,7 +46,6 @@ Este alias es un atajo para editar el archivo de configuración global de Git:
 
 Ejemplo de uso:
 ```bash
-git ec
+git config --global alias.ec "config --global -e"
 ```
 
-Siéntete libre de personalizar y usar estos alias según tus preferencias. Para agregar más alias o modificar los existentes, puedes editar directamente tu archivo de configuración global de Git o usar el comando `git config`.
